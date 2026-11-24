@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&family=Arimo:ital,wght@0,400..700;1,400..700&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Mitr:wght@200;300;400;500;600;700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Share+Tech+Mono&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+:root {
+  /* ใช้ Mitr ร่วมกับ Anuphan เพื่อให้การจัดตำแหน่งสระและวรรณยุกต์ไทยถูกต้องแม่นยำ ไม่ซ้อนทับกัน */
+  font-family: 'Mitr', 'Anuphan', 'Libre Franklin', 'Work Sans', sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga" 1, "dlig" 1;
+  font-synthesis: none;
+}
+
+/* ปรับแต่ง leaflet marker ให้ Compact กว้าง 190px พอดีเป๊ะ */
+.custom-weather-pin {
+  background: transparent !important;
+  border: none !important;
+  width: 190px !important;
+}
+
+.custom-weather-pin * {
+  box-sizing: border-box;
+}
+
+/* บังคับให้รูปภาพเต็มความกว้างการ์ด 100% ไร้ช่องว่างสีขาว */
+.custom-weather-pin img {
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  display: block !important;
+  object-fit: cover !important;
+}
+
+/* Scrollbar สไตล์เรียบหรู มินิมอล */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
